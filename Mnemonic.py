@@ -8,7 +8,15 @@ import os
 import os.path
 from termcolor import colored
 from sozlukler import sifreleme_sozlugu, sifre_cozme_sozlugu
-
+'''
+Fix For:
+Traceback (most recent call last):
+  File "/home/oreo/retools/digital_stego/Mnemonic/Mnemonic.py", line 132, in <module>          
+    f.write("%s" % item)
+ValueError: Exceeds the limit (4300) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit
+'''
+import sys
+sys.set_int_max_str_digits(0)
 
 print(colored("""
 
